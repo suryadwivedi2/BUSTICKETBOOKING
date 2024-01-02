@@ -34,6 +34,11 @@ exports.addUser = async (req, res, next) => {
 }
 
 
+const generatetoken=({id,name,email})=>{
+    return jwt.sign({id,name,email},process.env.JWT_STRING)
+}
+
+
 exports.loginUser = async (req, res, next) => {
     try {
         const email = req.body.email;
@@ -46,10 +51,10 @@ exports.loginUser = async (req, res, next) => {
                     return res.status(400).json({ user: user });
                 }
                 if (result === true) {
-                    res.status(201).json(user);
+                    res.status(201).json({token:generatetoken(user)});
                 }
                 if (result === false) {
-                    return res.status(400).json({ "message": "Please Check your Password" });
+                    return res.status(200).json({ "message": "Please Check your Password" });
                 }
             })
         } else {

@@ -1,0 +1,57 @@
+h1{
+    color: red;
+    margin:0px;
+}
+
+#err_div{
+    width: 400px;
+    height: 400px;
+    padding-top:100px;
+    margin:200px 300px;
+    border: 5px solid red;
+}
+
+
+#main_div {
+    position: relative;
+    width: 400px;
+    height: 500px;
+    border: 2px solid green;
+    padding: 50px;
+    margin-top: 150px;
+    margin-left: 500px;
+    margin-bottom: 500px;
+
+}
+
+#l {
+    width: 50px;
+    height: 50px;
+    border: 1px solid rgb(13, 14, 13);
+}
+
+#U {
+    width: 50px;
+    height: 50px;
+    border: 1px solid rgb(13, 14, 13);
+    float: left;
+}
+
+#subdiv1 {
+    padding: 20px;
+    margin: 20px;
+    float: left;
+}
+
+#subdiv2 {
+    padding: 20px;
+    margin: 20px;
+    float: left;
+}
+
+#subdiv3 {
+        position: absolute;
+        width: 200px;
+        height: 120px;
+        bottom: 0;
+}

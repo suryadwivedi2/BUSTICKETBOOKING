@@ -11,7 +11,9 @@ async function getformvalue(event) {
     const response = await axios.post('http://localhost:5000/user/login-user', user_details);
     if (response.status == 201) {
         alert('Login Successfull')
-    } else if (response.status == 400) {
+        sessionStorage.setItem('token', response.data.token)
+        window.location.href='../Booking_Page/Booking.html'
+    } else if (response.status == 200) {
         alert('Password Invalid')
     }else{
         console.log(response)
