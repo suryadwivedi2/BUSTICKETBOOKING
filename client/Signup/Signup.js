@@ -1,6 +1,3 @@
-
-
-
 async function getformvalue(event) {
   event.preventDefault();
   const Name = document.getElementById('name').value

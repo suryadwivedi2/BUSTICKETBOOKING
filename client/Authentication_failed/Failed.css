@@ -1,33 +1,46 @@
 h1 {
     text-align: center;
 }
+
 h1:hover {
     color: red;
 }
 
-.login{
-    width:70px;
-    height:40px;
+.login {
+    width: 70px;
+    height: 40px;
     margin-left: 45%;
 }
 
-.signup{
-    width:70px;
-    height:40px;
+.signup {
+    width: 70px;
+    height: 40px;
 }
 
 .login:hover {
     background-color: greenyellow;
 }
+
 .signup:hover {
     background-color: greenyellow;
 }
 
-.icon{
+.icon {
     text-align: center;
 }
 
-.about{
-text-align: center;
-margin-top: 300px;
+.about {
+    text-align: center;
+    margin-top: 300px;
+}
+
+.linebreak{
+    height:2px;
+    border-width:0;
+    color:gray;
+    background-color:gray
+}
+
+.divitme{
+    margin-left: 0;
 }

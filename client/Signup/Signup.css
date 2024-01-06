@@ -75,3 +75,8 @@ button :hover{
     left: -35px;
     content: "&#10006;";
 }
+
+.signupimg{
+height:100px;
+padding-left: 175px;
+}
