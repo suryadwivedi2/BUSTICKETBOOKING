@@ -22,6 +22,6 @@ async function getformvalue(event) {
 
 
 function redirect() {
-    window.location.href = '../Signup/Signup.html'
+    window.location.href = '../Signup/Signup.html';
 }
 
