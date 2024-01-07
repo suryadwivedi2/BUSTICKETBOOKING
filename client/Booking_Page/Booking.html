@@ -24,133 +24,158 @@
                 window.location.href = '../Authentication_Failed/Failed.html'
             }
         })
-
+        let vlaue = 2000;
 
     </script>
 </head>
 
 <body id="body">
     <header>
+        <h1>PRATAP LUXURY BUS SERVICE</h1>
+
         <div class="divtime">
             <h4 id="time">
 
             </h4>
         </div>
+        <div class="dis_info" id="dinfo">
+            <h4>
+                Travelling Distance
+            </h4>
+            <select name="from" id="_from">
+                <option value="null">Select</option>
+                <option value="delhi">Delhi</option>
+                <option value="agra">Agra</option>
+                <option value="lucknow">Lucknow</option>
+            </select>
+            <span>
+                <img src="double-arrow.png" alt="arrow" id="arrimg">
+            </span>
+            <select name="To" id="_to">
+                <option value="null">Select</option>
+                <option value="delhi">Delhi</option>
+                <option value="agra">Agra</option>
+                <option value="lucknow">Lucknow</option>
+            </select>
+            <button onclick="CheckDistance(event)">Check Distance</button>
+            <div id="kmsinfo">
+                <input type="text" readonly id="kms">
+            </div>
+        </div>
     </header>
     <div class="form-popup" id="myForm">
-      <form action="/action_page.php" class="form-container">
-        <h1>PASSENGER DETAILS</h1>
-        <label for="name"><b>Name</b></label>
-        <input type="text" placeholder="Enter Name" name="name" required>
-    
-        <label for="age"><b>Age</b></label>
-        <input type="text" placeholder="Enter Age" name="age" required>
-    
-        <label for="phnumber"><b>Phonenumber</b></label>
-        <input type="text" placeholder="Enter Email" name="phnumber" required>
+        <form action="#" class="form-container">
+            <h1>PASSENGER DETAILS</h1>
+            <label for="name"><b>Name</b></label>
+            <input type="text" placeholder="Enter Name" name="name" required>
 
-        <label for="amnt"><b>Amount</b></label>
-        <input type="text"  name="amnt" readonly>
-    
-        <button type="submit" class="btn">Book</button>
-        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-      </form>
+            <label for="age"><b>Age</b></label>
+            <input type="text" placeholder="Enter Age" name="age" required>
+
+            <label for="phnumber"><b>Phonenumber</b></label>
+            <input type="text" placeholder="Enter Email" name="phnumber" required>
+
+            <label for="amnt"><b>Amount</b></label>
+            <input type="text" id="amnt" name="amnt" readonly>
+
+            <button type="submit" class="btn" onclick="BookTicket(event)">Book</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
     </div>
     <main>
         <img src="bus-ticket.png" alt="bus booking" class="busimg">
         <div id="main_div">
             <div id="subdiv1">
                 <div>
-                    <button id="l" onclick="openForm()">
+                    <button class="sbtn" id="l" value="l" onclick="openForm(value)">
                         L1
                     </button>
                 </div>
                 <br>
                 <div>
-                    <button id="l" onclick="openForm()">
+                    <button class="sbtn" id="l" value="l" onclick="openForm(value)">
                         L2
                     </button>
                 </div>
                 <br>
                 <div>
-                    <button id="l" onclick="openForm()">
+                    <button class="sbtn" id="l" value="l" onclick="openForm(value)">
                         L3
                     </button>
                 </div>
                 <br>
                 <div>
-                    <button id="l" onclick="openForm()">
+                    <button class="sbtn" id="l" value="l" onclick="openForm(value)">
                         L4
                     </button>
                 </div>
             </div>
             <div id="subdiv2">
                 <div>
-                    <button id="l" onclick="openForm()">
+                    <button class="sbtn" id="l" value="l" onclick="openForm(value)">
                         L5
                     </button>
                 </div>
                 <br>
                 <div>
-                    <button id="l" onclick="openForm()">
+                    <button class="sbtn" id="l" value="l" onclick="openForm(value)">
                         L6
                     </button>
                 </div>
                 <br>
                 <div>
-                    <button id="l" onclick="openForm()">
+                    <button class="sbtn" id="l" value="l" onclick="openForm(value)">
                         L7
                     </button>
                 </div>
                 <br>
                 <div>
-                    <button id="l" onclick="openForm()">
+                    <button class="sbtn" id="l" value="l" onclick="openForm(value)">
                         L8
                     </button>
                 </div>
             </div>
             <div id="subdiv3">
                 <div>
-                    <button id="U" onclick="openForm()">
+                    <button class="sbtn" id="U" value="U" onclick="openForm(value)">
                         UP1
                     </button>
                 </div>
                 <div>
-                    <button id="U" onclick="openForm()">
+                    <button class="sbtn" id="U" value="U" onclick="openForm(value)">
                         UP2
                     </button>
                 </div>
                 <div>
-                    <button id="U" onclick="openForm()">
+                    <button class="sbtn" id="U" value="U" onclick="openForm(value)">
                         UP3
                     </button>
                 </div>
                 <div>
-                    <button id="U" onclick="openForm()">
+                    <button class="sbtn" id="U" value="U" onclick="openForm(value)">
                         UP4
                     </button>
                 </div>
                 <div>
-                    <button id="U" onclick="openForm()">
+                    <button class="sbtn" id="U" value="U" onclick="openForm(value)">
                         UP5
                     </button>
                 </div>
                 <div>
-                    <button id="U" onclick="openForm()">
+                    <button class="sbtn" id="U" value="U" onclick="openForm(value)">
                         UP6
                     </button>
                 </div>
                 <div>
-                    <button id="U" onclick="openForm()">
+                    <button class="sbtn" id="U" value="U" onclick="openForm(value)">
                         UP7
                     </button>
                 </div>
                 <div>
-                    <button id="U" onclick="openForm()">
+                    <button class="sbtn" id="U" value="U" onclick="openForm(value)">
                         UP8
                     </button>
                 </div>
-
             </div>
         </div>
     </main>
@@ -158,7 +183,7 @@
         <div class="about">
             <hr class="linebreak">
             <h4>About</h4>
-            <p>Pratap Bus Booking service</p>
+            <p>Copyright@Pratap_Traveles_pvt_ltd</p>
             <p>Office Address: infront of shubash statue banda road atarra</p>
             <p>Pincode: 210201</p>
             <p>Phone Number: 1100201201</p>
@@ -178,6 +203,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.3/axios.min.js"
         integrity="sha512-JWQFV6OCC2o2x8x46YrEeFEQtzoNV++r9im8O8stv91YwHNykzIS2TbvAlFdeH0GVlpnyd79W0ZGmffcRi++Bw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

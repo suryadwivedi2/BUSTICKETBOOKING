@@ -13,8 +13,10 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 
 const userroute=require('./routes/user')
+const purchaseroute=require('./routes/purchase')
 
 app.use('/user',userroute);
+app.use('/purchase',purchaseroute)
 
 
 const port = process.env.PORT 
