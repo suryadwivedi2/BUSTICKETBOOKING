@@ -71,9 +71,19 @@ function CheckDistance(event) {
 
 
 async function BookTicket(event) {
+    const phonenumber = document.getElementById('phnumber').value;
+    const name = document.getElementById('name').value;
+    const source = document.getElementById('_from').value;
+    const destination = document.getElementById('_to').value;
+
     event.preventDefault();
     let asnt_detail = {
-        "amount": totalamount
+        "amount": totalamount,
+        "name": name,
+        "source": source,
+        "destination": destination,
+        "Mobile": phonenumber
+
     }
     const response = await axios.post('http://localhost:5000/purchase/purchase-ticket', asnt_detail, { headers: { "Authorization": token } });
     console.log(response);
@@ -85,8 +95,12 @@ async function BookTicket(event) {
             const res = await axios.post('http://localhost:5000/purchase/update-transaction', {
                 order_id: options.order_id,
                 payment_id: response.razorpay_payment_id,
+                "name": name,
+                "source": source,
+                "destination": destination,
+                "Mobile": phonenumber
             }, { headers: { "Authorization": token } })
-            alert('Ticket IS Booked')
+            alert('Ticket Is Booked')
         }
     }
     const rpz1 = new Razorpay(options)
