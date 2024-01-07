@@ -13,6 +13,7 @@ function mail(event) {
 
 window.addEventListener('DOMContentLoaded', () => {
     let time = document.getElementById('time');
+    let date=new Date();
     time.textContent = new Date();
     console.log(token);
 })
@@ -26,8 +27,9 @@ function logoutbutton(event) {
 
 let totalamount;
 
-function openForm(value) {
+function openForm(value,name) {
     document.getElementById("myForm").style.display = "block";
+    const seatname=document.getElementById('seat_name');
     const amnt = document.getElementById('amnt');
     totalamount = 0;
     if (value == 'l') {
@@ -37,6 +39,7 @@ function openForm(value) {
     }
     //console.log(value)
     amnt.value = `${totalamount} `
+    seatname.value=`${name} seat`    
 
 }
 
@@ -75,6 +78,7 @@ async function BookTicket(event) {
     const name = document.getElementById('name').value;
     const source = document.getElementById('_from').value;
     const destination = document.getElementById('_to').value;
+    const seatname=document.getElementById('seat_name').value;
 
     event.preventDefault();
     let asnt_detail = {
@@ -82,8 +86,8 @@ async function BookTicket(event) {
         "name": name,
         "source": source,
         "destination": destination,
-        "Mobile": phonenumber
-
+        "Mobile": phonenumber,
+        "seat":seatname
     }
     const response = await axios.post('http://localhost:5000/purchase/purchase-ticket', asnt_detail, { headers: { "Authorization": token } });
     console.log(response);

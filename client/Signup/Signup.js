@@ -2,18 +2,20 @@ async function getformvalue(event) {
   event.preventDefault();
   const Name = document.getElementById('name').value
   const email = document.getElementById('email').value
-  const password=document.getElementById('password').value;
+  const password = document.getElementById('password').value;
   const Phonenumber = document.getElementById('phonenumber').value
   const Address = document.getElementById('Address').value
   const Pincode = document.getElementById('pincode').value
 
-  console.log(Name, email, Phonenumber,password, Address, Pincode);
+  console.log(Name, email, Phonenumber, password, Address, Pincode);
+
+
 
   let user_details = {
     Name: Name,
     Email: email,
     Phone: Phonenumber,
-    Password:password,
+    Password: password,
     Address: Address,
     Pincode: Pincode
   }
@@ -34,6 +36,13 @@ var letter = document.getElementById("letter");
 var capital = document.getElementById("capital");
 var number = document.getElementById("number");
 var length = document.getElementById("length");
+
+
+function redirect() {
+  window.location.href = '../Login/Login.html'
+}
+
+
 
 // When the user clicks on the password field, show the message box
 myInput.onfocus = function () {
@@ -86,3 +95,5 @@ myInput.onkeyup = function () {
     length.classList.add("invalid");
   }
 }
+
+

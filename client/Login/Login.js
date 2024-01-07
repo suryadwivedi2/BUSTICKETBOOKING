@@ -12,10 +12,16 @@ async function getformvalue(event) {
     if (response.status == 201) {
         alert('Login Successfull')
         sessionStorage.setItem('token', response.data.token)
-        window.location.href='../Booking_Page/Booking.html'
+        window.location.href = '../Booking_Page/Booking.html'
     } else if (response.status == 200) {
         alert('Password Invalid')
-    }else{
+    } else {
         console.log(response)
     }
 }
+
+
+function redirect() {
+    window.location.href = '../Signup/Signup.html'
+}
+

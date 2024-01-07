@@ -1,172 +1,176 @@
 h1 {
-    color: red;
-    margin: 0px;
+  color: red;
+  margin-top: 0px;
+  padding-left: 400px;
 }
 
 #err_div {
-    width: 400px;
-    height: 400px;
-    padding-top: 100px;
-    margin: 200px 300px;
-    border: 5px solid red;
+  width: 400px;
+  height: 400px;
+  padding-top: 100px;
+  margin: 200px 300px;
+  border: 5px solid red;
 }
 
-.about {
-    text-align: center;
-    margin-top: 100px;
+.about_footer {
+  text-align: center;
+  margin-top: 0px;
 }
 
 .linebreak {
-    height: 2px;
-    border-width: 0;
-    color: gray;
-    background-color: gray
+  height: 2px;
+  border-width: 0;
+  color: gray;
+  background-color: gray
 }
 
 #main_div {
-    position: relative;
-    width: 400px;
-    height: 500px;
-    border: 2px solid green;
-    padding: 50px;
-    margin-top: 150px;
-    margin-left: 500px;
-    margin-bottom: 500px;
+  position: relative;
+  width: 400px;
+  height: 500px;
+  border: 2px solid green;
+  padding: 50px;
+  margin-top: 150px;
+  margin-left: 500px;
+  margin-bottom: 500px;
 
 }
 
 #l {
-    width: 50px;
-    height: 50px;
-    border: 1px solid rgb(13, 14, 13);
+  width: 50px;
+  height: 50px;
+  border: 1px solid rgb(13, 14, 13);
 }
 
 #l:hover {
-    background-color: aqua;
+  background-color: aqua;
 }
 
 #U {
-    width: 50px;
-    height: 50px;
-    border: 1px solid rgb(13, 14, 13);
-    float: left;
+  width: 50px;
+  height: 50px;
+  border: 1px solid rgb(13, 14, 13);
+  float: left;
 }
 
 #U:hover {
-    background-color: aqua;
+  background-color: aqua;
 }
 
 #subdiv1 {
-    padding: 20px;
-    margin: 20px;
-    float: left;
+  padding: 20px;
+  margin: 20px;
+  float: left;
 }
 
 #subdiv2 {
-    padding: 20px;
-    margin: 20px;
-    float: left;
+  padding: 20px;
+  margin: 20px;
+  float: left;
 }
 
 #subdiv3 {
-    position: absolute;
-    width: 200px;
-    height: 120px;
-    bottom: 0;
+  position: absolute;
+  width: 200px;
+  height: 120px;
+  bottom: 0;
 }
 
 
 .busimg {
-    height: 100px;
-    padding-left: 650px;
+  height: 100px;
+  padding-left: 650px;
 }
 
 
 .lgbtn:hover {
-    border-radius: 1px;
+  border-radius: 1px;
 }
 
 .container {
-    padding-left: 1000px;
+  padding-left: 1000px;
 }
 
 .open-button {
-    background-color: #555;
-    color: white;
-    padding: 16px 20px;
-    border: none;
-    cursor: pointer;
-    opacity: 0.8;
-    position: fixed;
-    bottom: 23px;
-    right: 28px;
-    width: 280px;
-  }
-  
-  /* The popup form - hidden by default */
-  .form-popup {
-    display: none;
-    position: fixed;
-    bottom: 0;
-    right: 15px;
-    border: 3px solid #f1f1f1;
-    z-index: 9;
-  }
-  
-  /* Add styles to the form container */
-  .form-container {
-    max-width: 300px;
-    padding: 10px;
-    background-color: white;
-  }
-  
-  /* Full-width input fields */
-  .form-container input[type=text], .form-container input[type=password] {
-    width: 100%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    border: none;
-    background: #f1f1f1;
-  }
-  
-  /* When the inputs get focus, do something */
-  .form-container input[type=text]:focus, .form-container input[type=password]:focus {
-    background-color: #ddd;
-    outline: none;
-  }
-  
-  /* Set a style for the submit/login button */
-  .form-container .btn {
-    background-color: #04AA6D;
-    color: white;
-    padding: 16px 20px;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    margin-bottom:10px;
-    opacity: 0.8;
-  }
-  
-#arrimg{
-    width: 70px;
-    padding: 20px;
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
 }
 
-  /* Add a red background color to the cancel button */
-  .form-container .cancel {
-    background-color: red;
-  }
-  
-  /* Add some hover effects to buttons */
-  .form-container .btn:hover, .open-button:hover {
-    opacity: 1;
-  }
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
 
-  .dinput{
-    background-color: blue;
-  }
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
 
-  #kms{
-    visibility: hidden;
-    background-color: gold;
-  }
+/* Full-width input fields */
+.form-container input[type=text],
+.form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus,
+.form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+#arrimg {
+  width: 70px;
+  padding: 20px;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover,
+.open-button:hover {
+  opacity: 1;
+}
+
+.dinput {
+  background-color: blue;
+}
+
+#kms {
+  visibility: hidden;
+  background-color: gold;
+}

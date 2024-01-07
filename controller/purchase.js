@@ -22,7 +22,8 @@ function sendsms(name, source, destination, mobile, paymentid) {
 
 exports.purchaseTickets = async (req, res, next) => {
     const amount = req.body.amount * 100;
-    console.log(amount)
+    const seatname = req.body.seat;
+    console.log(amount);
     const rzp = new Razor({
         key_id: process.env.KEY_ID,
         key_secret: process.env.KEY_SECRET
@@ -31,7 +32,7 @@ exports.purchaseTickets = async (req, res, next) => {
         if (err) {
             throw new Error(err);
         }
-        Order.create({ orderId: order.id, status: "PENDING", userId: req.user.id })
+        Order.create({ orderId: order.id, status: "PENDING", userId: req.user.id, seat: seatname })
             .then(() => {
                 return res.status(201).json({ order, key_id: rzp.key_id })
             })
