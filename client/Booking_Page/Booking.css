@@ -36,24 +36,24 @@ h1 {
 
 }
 
-#l {
+.l {
   width: 50px;
   height: 50px;
   border: 1px solid rgb(13, 14, 13);
 }
 
-#l:hover {
+.l:hover {
   background-color: aqua;
 }
 
-#U {
+.U {
   width: 50px;
   height: 50px;
   border: 1px solid rgb(13, 14, 13);
   float: left;
 }
 
-#U:hover {
+.U:hover {
   background-color: aqua;
 }
 
@@ -118,6 +118,7 @@ h1 {
 .form-container {
   max-width: 300px;
   padding: 10px;
+  max-height: 750px;
   background-color: white;
 }
 
@@ -173,4 +174,10 @@ h1 {
 #kms {
   visibility: hidden;
   background-color: gold;
+}
+
+
+.sbtn:disabled {
+  background-color: #555;
+  opacity: 70%;
 }

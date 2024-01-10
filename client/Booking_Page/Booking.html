@@ -17,7 +17,6 @@
             }
         })
         let vlaue = 2000;
-
     </script>
 </head>
 
@@ -60,6 +59,13 @@
                 <input type="text" readonly id="kms">
             </div>
         </div>
+        <div id="main_date">
+            <label for="date">Select Your journey Date =></label>
+            <br>
+            <input type='date' name="setTodaysDate" id="date"/>
+            <button onclick="select_date(event)">Select_Date</button>
+        </div>
+
     </header>
     <div class="form-popup" id="myForm">
         <form action="#" class="form-container">
@@ -78,6 +84,8 @@
 
             <input type="text" placeholder="seat Name" id="seat_name" readonly>
 
+            <input type="date" id="seat_date" required>
+
             <button type="submit" class="btn" onclick="BookTicket(event)">Book</button>
             <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
         </form>
@@ -87,92 +95,92 @@
         <div id="main_div">
             <div id="subdiv1">
                 <div>
-                    <button class="sbtn" id="l" value="l" name="L1" onclick="openForm(value,name)">
+                    <button class="sbtn l" id="L1" value="l" name="L1" onclick="openForm(value,name)">
                         L1
                     </button>
                 </div>
                 <br>
                 <div>
-                    <button class="sbtn" id="l" value="l" name="L2"  onclick="openForm(value,name)">
+                    <button class="sbtn l" id="L2" value="l" name="L2" onclick="openForm(value,name)">
                         L2
                     </button>
                 </div>
                 <br>
                 <div>
-                    <button class="sbtn" id="l" value="l" name="L3" onclick="openForm(value,name)">
+                    <button class="sbtn l" id="l3" value="l" name="L3" onclick="openForm(value,name)">
                         L3
                     </button>
                 </div>
                 <br>
                 <div>
-                    <button class="sbtn" id="l" value="l" name="L4" onclick="openForm(value,name)">
+                    <button class="sbtn l" id="l4" value="l" name="L4" onclick="openForm(value,name)">
                         L4
                     </button>
                 </div>
             </div>
             <div id="subdiv2">
                 <div>
-                    <button class="sbtn" id="l" value="l" name="L5" onclick="openForm(value,name)">
+                    <button class="sbtn l" id="L5" value="l" name="L5" onclick="openForm(value,name)">
                         L5
                     </button>
                 </div>
                 <br>
                 <div>
-                    <button class="sbtn" id="l" value="l" name="L6" onclick="openForm(value,name)">
+                    <button class="sbtn l" id="l6" value="l" name="L6" onclick="openForm(value,name)">
                         L6
                     </button>
                 </div>
                 <br>
                 <div>
-                    <button class="sbtn" id="l" value="l" name="L7" onclick="openForm(value,name)">
+                    <button class="sbtn l" id="l7" value="l" name="L7" onclick="openForm(value,name)">
                         L7
                     </button>
                 </div>
                 <br>
                 <div>
-                    <button class="sbtn" id="l" value="l" name="L8" onclick="openForm(value,name)">
+                    <button class="sbtn l" id="l8" value="l" name="L8" onclick="openForm(value,name)">
                         L8
                     </button>
                 </div>
             </div>
             <div id="subdiv3">
                 <div>
-                    <button class="sbtn" id="U" value="U" name="U1" onclick="openForm(value,name)">
+                    <button class="sbtn U" id="U1" value="U" name="U1" onclick="openForm(value,name)">
                         UP1
                     </button>
                 </div>
                 <div>
-                    <button class="sbtn" id="U" value="U" name="U2" onclick="openForm(value,name)">
+                    <button class="sbtn U" id="U2" value="U" name="U2" onclick="openForm(value,name)">
                         UP2
                     </button>
                 </div>
                 <div>
-                    <button class="sbtn" id="U" value="U" name="U3" onclick="openForm(value,name)">
+                    <button class="sbtn U" id="U3" value="U" name="U3" onclick="openForm(value,name)">
                         UP3
                     </button>
                 </div>
                 <div>
-                    <button class="sbtn" id="U" value="U" name="U4" onclick="openForm(value,name)">
+                    <button class="sbtn U" id="U4" value="U" name="U4" onclick="openForm(value,name)">
                         UP4
                     </button>
                 </div>
                 <div>
-                    <button class="sbtn" id="U" value="U" name="U5" onclick="openForm(value,name)">
+                    <button class="sbtn U" id="U5" value="U" name="U5" onclick="openForm(value,name)">
                         UP5
                     </button>
                 </div>
                 <div>
-                    <button class="sbtn" id="U" value="U" name="U6" onclick="openForm(value,name)">
+                    <button class="sbtn U" id="U6" value="U" name="U6" onclick="openForm(value,name)">
                         UP6
                     </button>
                 </div>
                 <div>
-                    <button class="sbtn" id="U" value="U" name="U7" onclick="openForm(value,name)">
+                    <button class="sbtn U" id="U7" value="U" name="U7" onclick="openForm(value,name)">
                         UP7
                     </button>
                 </div>
                 <div>
-                    <button class="sbtn" id="U" value="U" name="U8" onclick="openForm(value,name)">
+                    <button class="sbtn U" id="U8" value="U" name="U8" onclick="openForm(value,name)">
                         UP8
                     </button>
                 </div>

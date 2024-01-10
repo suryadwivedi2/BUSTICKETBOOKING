@@ -11,11 +11,15 @@ function mail(event) {
 }
 
 
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('DOMContentLoaded', async () => {
     let time = document.getElementById('time');
-    let date=new Date();
+    let date = new Date();
     time.textContent = new Date();
     console.log(token);
+
+    var today = new Date().toISOString().split('T')[0];
+    document.getElementsByName("setTodaysDate")[0].setAttribute('min', today);
+
 })
 
 
@@ -27,10 +31,11 @@ function logoutbutton(event) {
 
 let totalamount;
 
-function openForm(value,name) {
+function openForm(value, name) {
     document.getElementById("myForm").style.display = "block";
-    const seatname=document.getElementById('seat_name');
+    const seatname = document.getElementById('seat_name');
     const amnt = document.getElementById('amnt');
+    const seatdate = document.getElementById('seat_date');
     totalamount = 0;
     if (value == 'l') {
         totalamount = distance * 5;
@@ -39,7 +44,8 @@ function openForm(value,name) {
     }
     //console.log(value)
     amnt.value = `${totalamount} `
-    seatname.value=`${name} seat`    
+    seatname.value = `${name}`
+    seatdate.value = `${journey_date}`
 
 }
 
@@ -48,6 +54,7 @@ function closeForm() {
 }
 
 let distance = 0;
+
 
 function CheckDistance(event) {
     event.preventDefault();
@@ -72,13 +79,31 @@ function CheckDistance(event) {
     input.style.visibility = 'visible';
 }
 
+async function select_date() {
+    let journey_date = document.getElementById('date').value;
+    journey_date = journey_date.toString();
+    console.log(journey_date)
+    const response = await axios.get(`http://localhost:5000/purchase/get-order`);
+    for (let i = 0; i < response.data.length; i++) {
+        let date = response.data[i].journeydate.toString();
+        if (response.data[i].status = 'successfull' && response.data[i].journeydate.split('T')[0] == journey_date) {
+            const seat_btn = document.getElementById(`${response.data[i].seat}`);
+            seat_btn.disabled = true;
+        }else{
+            const seat_btn = document.getElementById(`${response.data[i].seat}`);
+            seat_btn.disabled = false;
+        }
+    }
+}
+
 
 async function BookTicket(event) {
     const phonenumber = document.getElementById('phnumber').value;
     const name = document.getElementById('name').value;
     const source = document.getElementById('_from').value;
     const destination = document.getElementById('_to').value;
-    const seatname=document.getElementById('seat_name').value;
+    const seatname = document.getElementById('seat_name').value;
+    const seatdate = document.getElementById('seat_date').value
 
     event.preventDefault();
     let asnt_detail = {
@@ -87,7 +112,8 @@ async function BookTicket(event) {
         "source": source,
         "destination": destination,
         "Mobile": phonenumber,
-        "seat":seatname
+        "seat": seatname,
+        "journey_date": seatdate
     }
     const response = await axios.post('http://localhost:5000/purchase/purchase-ticket', asnt_detail, { headers: { "Authorization": token } });
     console.log(response);

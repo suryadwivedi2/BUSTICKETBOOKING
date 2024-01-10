@@ -23,6 +23,7 @@ function sendsms(name, source, destination, mobile, paymentid) {
 exports.purchaseTickets = async (req, res, next) => {
     const amount = req.body.amount * 100;
     const seatname = req.body.seat;
+    const journeydate=req.body.journey_date;
     console.log(amount);
     const rzp = new Razor({
         key_id: process.env.KEY_ID,
@@ -32,7 +33,7 @@ exports.purchaseTickets = async (req, res, next) => {
         if (err) {
             throw new Error(err);
         }
-        Order.create({ orderId: order.id, status: "PENDING", userId: req.user.id, seat: seatname })
+        Order.create({ orderId: order.id, status: "PENDING", userId: req.user.id, seat: seatname,journeydate:journeydate })
             .then(() => {
                 return res.status(201).json({ order, key_id: rzp.key_id })
             })
@@ -64,6 +65,19 @@ exports.updatetransaction = (req, res, next) => {
             }).catch(err => {
                 console.log(err)
             })
-        sendsms(name, source, destination, Mobile, payment_id)
+        //sendsms(name, source, destination, Mobile, payment_id)
     }
 }
+
+
+exports.getOrder = async (req, res, next) => {
+    try {
+        const orders = await Order.find();
+       //console.log(orders);
+        res.status(200).json(orders)
+    } catch (err) {
+        res.status(500).json(err)
+    }
+}
+
+

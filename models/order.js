@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const { TrustProductsEntityAssignmentsContextImpl } = require('twilio/lib/rest/trusthub/v1/trustProducts/trustProductsEntityAssignments')
 const schema = mongoose.Schema
 
 const orderSchema = new schema({
@@ -18,6 +19,11 @@ const orderSchema = new schema({
   },
   seat: {
     type: String,
+  },
+  journeydate: {
+    type: Date,
+    reqiured: true,
+
   }
 })
 
